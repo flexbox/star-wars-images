@@ -58,8 +58,7 @@ configure :build do
     rules: [{:user_agent => '*', :allow => %w(/)}],
     sitemap: data.settings.site.url+'sitemap.xml'
 
-  # Use this for gh-pages
-  # activate :relative_assets
-  # set :relative_links, true
+  activate :relative_assets
+  set :relative_links, true
 
 end
