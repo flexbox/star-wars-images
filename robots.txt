@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://github.com/flexbox/codelesssitemap.xml
+Sitemap: https://github.com/flexbox/star-wars-imagessitemap.xml
