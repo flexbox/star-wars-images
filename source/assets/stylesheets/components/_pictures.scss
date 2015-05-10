@@ -1,0 +1,35 @@
+$break-small: 380px;
+$break-large:  769px;
+
+@mixin respond-to($media) {
+  @if $media == pawadan {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == jedi {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == master {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.picture {
+  float: left;
+
+  @include respond-to(pawadan) {
+    width: 100% ;
+  }
+
+  @include respond-to(jedi) {
+    width: 33%;
+  }
+
+  @include respond-to(master) {
+    width: 16%;
+  }
+}
